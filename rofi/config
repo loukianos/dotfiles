@@ -1,0 +1,6 @@
+rofi.show: run
+rofi.modi: window,ssh,run
+rofi.theme: .config/rofi/louki.rasi
+rofi.fullscreen:true
+rofi.font: Iosevka Term 15
+rofi.terminal:terminator
