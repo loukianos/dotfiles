@@ -63,6 +63,11 @@ bindsym Mod1+Shift+f exec gnome-screenshot -w
 bindsym Mod1+comma exec amixer -D pulse sset Master 5%-
 bindsym Mod1+period exec amixer -D pulse sset Master 5%+
 
+# play/pause, previous, next
+bindsym Mod1+n exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym Mod1+m exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym Mod1+b exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
 
 
 # change focus
