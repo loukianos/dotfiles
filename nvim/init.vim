@@ -68,8 +68,27 @@ set showmatch
 "comment enter
 setlocal formatoptions=croql
 
-"Keymap
+"LanguageClient integration"
 
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ }
+
+" Language specific
+" Rust
+let g:rustfmt_autosave = 1
+let g:racer_cmd = "/home/loukianos/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+" "Keymap
 " set leader and remap colon to space
 let mapleader=";"
 nnoremap <SPACE> :
