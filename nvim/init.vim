@@ -11,7 +11,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'bling/vim-airline'
 Plug 'neomake/neomake', { 'for': ['rust'] }
-setlocal formatoptions=croql
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.local/src/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
