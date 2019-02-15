@@ -76,6 +76,22 @@ bindsym Mod1+$down focus down
 bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
 
+# resize
+bindsym Mod1+Shift+y exec i3resize left
+bindsym Mod1+Shift+u exec i3resize down
+bindsym Mod1+Shift+i exec i3resize up
+bindsym Mod1+Shift+o exec i3resize right
+
+# resize gaps
+bindsym Mod1+x gaps inner current plus 5
+bindsym Mod1+Shift+x gaps inner current minus 5
+bindsym Mod1+z gaps outer current plus 5
+bindsym Mod1+Shift+z gaps outer current minus 5
+
+# toggle split
+bindsym Mod1+t split toggle
+bindsym Mod1+shift+t gaps inner current set 10; gaps outer current set 10
+
 # alternatively, you can use the cursor keys:
 bindsym Mod1+Left focus left
 bindsym Mod1+Down focus down
@@ -104,7 +120,7 @@ bindsym Mod1+v split v
 bindsym Mod1+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod1+s layout stacking
+# bindsym Mod1+s layout stacking
 bindsym Mod1+w layout tabbed
 bindsym Mod1+e layout toggle split
 
