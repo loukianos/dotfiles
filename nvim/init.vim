@@ -3,6 +3,10 @@
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
 " Basics
+Plug 'autozimu/LanguageClient-neovim', {
+\ 'branch': 'next',
+\ 'do': 'bash install.sh',
+\ }
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
