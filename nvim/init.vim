@@ -112,6 +112,9 @@ nnoremap <leader>xs :nohlsearch<CR>
 " toggle NERDtree
 nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 
+"fzf hotkey"
+nnoremap <silent> <leader>ff :FZF<CR>
+
 " toggle buffer
 nnoremap <silent> <leader>bb <C-^>
 
