@@ -76,12 +76,6 @@ bindsym Mod1+$down focus down
 bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
 
-# resize
-bindsym Mod1+Shift+y exec i3resize left
-bindsym Mod1+Shift+u exec i3resize down
-bindsym Mod1+Shift+i exec i3resize up
-bindsym Mod1+Shift+o exec i3resize right
-
 # resize gaps
 bindsym Mod1+x gaps inner current plus 5
 bindsym Mod1+Shift+x gaps inner current minus 5
