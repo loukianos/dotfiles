@@ -1,5 +1,3 @@
-"Luke's vimrc
-
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
 " Basics
@@ -35,6 +33,11 @@ Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 " Python
 Plug 'zchee/deoplete-jedi'
+" Golang
+Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', {'build' : {'unix': 'make'}}
+Plug 'godoctor/godoctor.vim'
+Plug 'jodosha/vim-godebug'
 call plug#end()
 
 
@@ -74,6 +77,10 @@ setlocal formatoptions=croql
 
 "LanguageClient integration"
 
+" Ale settings
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
@@ -92,6 +99,32 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+" Golang
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au Filetype go set softtabstop=4
+au FileType go set tabstop=4
+au FileType go nmap <leader>gt :GoDeclsDir<cr>
+au FileType go nmap <leader>ga <Plug>(go-alternate-edit)
+au FileType go nmap <leader>gah <Plug>(go-alternate-split)
+au FileType go nmap <leader>gav <Plug>(go-alternate-vertical)
+au FileType go nmap gd <Plug>(go-def)
+
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+
+" let g:ale_sign_error = 'x'
+" let g:ale_sign_warning = '⚠'
+" let g:airline#extensions#ale#enabled = 1
 
 nmap <leader>k <Plug>RacerShowDocumentation
 
