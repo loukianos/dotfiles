@@ -68,6 +68,9 @@ bindsym Mod1+n exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotif
 bindsym Mod1+m exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 bindsym Mod1+b exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
+# sleep
+bindsym Mod1+q exec systemctl suspend
+
 
 
 # change focus
