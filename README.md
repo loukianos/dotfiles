@@ -32,3 +32,9 @@ To build the firmware for each type of keyboard, follow these steps:
 4. Open `lets_split_rev2_louki.hex` in QMK Toolbox
 5. Click `flash`
 
+#### DZ60
+1. Ensure that `qmk_firmware/keyboards/dz60/keymaps/<desired_keymap_folder>/keymap.c` is up to date
+2. From the `qmk_firmware` directory, run `make dz60:<desired_keymap_folder>`
+3. Reset the keyboard (on most of the keymaps, this is `fn(or space)` + `\`)
+4. Open `dz60_<desired_keymap_folder>.hex` in QMK Toolbox
+5. Click `flash`
